@@ -1,0 +1,33 @@
+{
+  "name": "User Facing Test",
+  "short_name": "user-facing",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Reproduce the background-notification issue",
+  "icons": {
+    "48": "icons/icon48x48.png"
+  },
+  "action": {
+    "default_icon": "icons/icon32x32.png",
+    "default_popup": "action.html"
+  },
+  "background": {
+    "service_worker": "mv3.js"
+  },
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "permissions": [
+    "tabs",
+    "chrome://favicon/",
+    "storage",
+    "scripting",
+    "notifications",
+    "declarativeNetRequest",
+    "unlimitedStorage",
+    "contextMenus",
+    "alarms",
+    "offscreen"
+  ]
+}
